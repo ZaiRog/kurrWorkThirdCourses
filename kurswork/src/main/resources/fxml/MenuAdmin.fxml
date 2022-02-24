@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="314.0" minWidth="463.0" prefHeight="540.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuAdminController">
+   <effect>
+      <InnerShadow height="39.98936170212765" radius="14.747340425531913" />
+   </effect>
+   <children>
+      <ImageView fitHeight="564.0" fitWidth="850.0" layoutX="2.0" layoutY="-5.0" nodeOrientation="INHERIT" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menuAdmin.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="150.0" layoutY="14.0" prefHeight="129.0" prefWidth="530.0" text="МЕНЮ АДМИНИСТРАТОРА" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.8980815347721822" cycleMethod="REPEAT" focusAngle="12.53" focusDistance="0.4497041420118344" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color green="1.0" blue="0.03333333507180214" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007532956685499058">
+                     <color>
+                        <Color green="1.0" blue="0.03333333507180214" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.13333334028720856" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="60.0" layoutY="351.0" mnemonicParsing="false" onAction="#ShowAdmins" prefHeight="80.0" prefWidth="135.0" text="Администраторы" />
+      <Button layoutX="236.0" layoutY="351.0" mnemonicParsing="false" onAction="#ShowUsers" prefHeight="80.0" prefWidth="135.0" text="Пользователи" />
+      <Button layoutX="402.0" layoutY="351.0" mnemonicParsing="false" onAction="#ShowTableStorage" prefHeight="80.0" prefWidth="135.0" text="Таблица склада" />
+      <Button layoutX="279.0" layoutY="476.0" mnemonicParsing="false" onAction="#Back" prefHeight="37.0" prefWidth="239.0" text="Назад" />
+      <Button layoutX="579.0" layoutY="351.0" mnemonicParsing="false" onAction="#ShowTableOrders" prefHeight="80.0" prefWidth="135.0" text="Таблиц заказов" />
+   </children>
+</AnchorPane>

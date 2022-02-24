@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuStorageController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1017.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/menuAdmin.jpg" />
+         </image>
+      </ImageView>
+      <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="557.0" prefWidth="880.0">
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="labelCount" prefHeight="46.0" prefWidth="224.0" text="Количество записей: " textFill="BLACK">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="GREY" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <TableView id="tableAlternative" fx:id="table" prefHeight="357.0" prefWidth="886.0">
+               <columns>
+                  <TableColumn id="columnName" fx:id="codeOfProduct" maxWidth="5000.0" minWidth="10.0" prefWidth="64.0" text="код " />
+                  <TableColumn id="columnName" fx:id="nameOfProduct" maxWidth="5000.0" prefWidth="352.0" text="наименование" />
+                  <TableColumn id="columnEx4" fx:id="numberOfProduct" maxWidth="5000.0" minWidth="0.0" prefWidth="100.0" text="кол-во" />
+                  <TableColumn id="columnEx2" fx:id="unit" maxWidth="5000.0" minWidth="10.0" prefWidth="97.0" text="ед. измерения" />
+                  <TableColumn id="columnName" fx:id="costOfProduct" maxWidth="5000.0" minWidth="10.0" prefWidth="157.0" text="цена" />
+               </columns>
+            </TableView>
+         </center>
+         <right>
+            <VBox prefHeight="357.0" prefWidth="109.0">
+               <children>
+                  <Button id="btnAdd" fx:id="btnAddNew" mnemonicParsing="false" onAction="#actionButtonPressed" text="Добавить" textFill="BLACK">
+                     <font>
+                        <Font size="13.0" fx:id="x1" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnDelete" font="$x1" mnemonicParsing="false" onAction="#actionButtonPressed" prefWidth="96.0" text="Удалить" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets left="5.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnChange" font="$x1" mnemonicParsing="false" onAction="#actionButtonPressed" text="Изменить" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets left="10.0" top="50.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="326.0" text="СКЛАД СТРОИТЕЛЬНЫЙ ДРОВОСЕК" textFill="BLACK" underline="true">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="textFind" prefHeight="45.0" prefWidth="278.0">
+                     <HBox.margin>
+                        <Insets left="-550.0" top="45.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnFind" font="$x1" mnemonicParsing="false" onAction="#actionSearch" prefWidth="96.0" text="Поиск" textFill="BLACK">
+                     <HBox.margin>
+                        <Insets left="50.0" top="65.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button contentDisplay="LEFT" font="$x1" mnemonicParsing="false" onAction="#ShowAll" prefWidth="192.0" text="Показать весь список" textFill="BLACK">
+                     <HBox.margin>
+                        <Insets left="100.0" top="65.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+   <effect>
+      <InnerShadow height="31.851063829787233" radius="12.712765957446809" />
+   </effect>
+</AnchorPane>

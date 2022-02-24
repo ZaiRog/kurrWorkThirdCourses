@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="446.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegistrationController">
+   <children>
+      <ImageView fitHeight="481.0" fitWidth="716.0" opacity="0.55" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mainMenu.jpg" />
+         </image>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.32236841320991516" green="0.18954069912433624" blue="0.18954069912433624" />
+               </color>
+            </InnerShadow>
+         </effect>
+      </ImageView>
+      <BorderPane layoutX="23.0" layoutY="97.0" prefHeight="335.0" prefWidth="555.0">
+         <bottom>
+            <HBox prefHeight="71.0" prefWidth="555.0">
+               <children>
+                  <Button id="btnCansel" defaultButton="true" mnemonicParsing="false" onAction="#actionSave" prefHeight="30.0" prefWidth="116.0" text="сохранить" textFill="BLACK">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" fx:id="x1" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btnSave" cancelButton="true" font="$x1" mnemonicParsing="false" onAction="#actionClose" prefHeight="30.0" prefWidth="99.0" text="отмена" textFill="BLACK">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="textLogin" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" fx:id="x2" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textPassword" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textName" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="textSurname" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ChoiceBox fx:id="choise" prefWidth="99.0">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Администратор" />
+                           <String fx:value="Пользователь" />
+                        </FXCollections>
+                     </items>
+                     <VBox.margin>
+                        <Insets left="5.0" top="25.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <VBox prefHeight="341.0" prefWidth="132.0">
+               <children>
+                  <Label font="$x1" prefWidth="75.0" text="Логин" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label font="$x1" prefWidth="75.0" text="Пароль" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="25.0" right="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label font="$x1" text="Имя" textFill="BLACK">
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label font="$x1" text="Фамилия" textFill="BLACK" />
+                  <Label text="Выберите роль" textFill="BLACK">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+      <HBox layoutX="23.0" layoutY="14.0" prefHeight="79.0" prefWidth="541.0">
+         <children>
+            <Label text="Введите ваши данные" textFill="BLACK">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="190.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <InnerShadow height="44.058510638297875" radius="15.764627659574469" />
+   </effect>
+</AnchorPane>
